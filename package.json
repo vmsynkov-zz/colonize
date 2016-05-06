@@ -21,7 +21,7 @@
     "color": "#2c2a2e",
     "theme": "dark"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "vmsynkov",
   "engines": {
     "vscode": "^1.0.0"
