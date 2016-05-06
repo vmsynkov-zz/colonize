@@ -1,0 +1,67 @@
+{
+  "name": "colonize",
+  "displayName": "Colonize",
+  "description": "Adds semicolon at the end of the line and optionally newline after",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vmsynkov/colonize/issues"
+  },
+  "homepage": "https://github.com/vmsynkov/colonize/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmsynkov/colonize"
+  },
+  "keywords": [
+    "semicolon",
+    "production",
+    "speed"
+  ],
+  "icon": "images/colonize.png",
+  "galleryBanner": {
+    "color": "#2c2a2e",
+    "theme": "dark"
+  },
+  "version": "1.0.0",
+  "publisher": "vmsynkov",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onCommand:extension.ordinaryColonize",
+    "onCommand:extension.newlineColonize"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [{
+      "command": "extension.ordinaryColonize",
+      "title": "Colonize Ordinary"
+    }, {
+      "command": "extension.newlineColonize",
+      "title": "Colonize Newline"
+    }],
+    "keybindings": [{
+      "command": "extension.ordinaryColonize",
+      "key": "shift+enter",
+      "mac": "shift+enter",
+      "when": "editorTextFocus"
+    }, {
+      "command": "extension.newlineColonize",
+      "key": "alt+enter",
+      "mac": "alt+enter",
+      "when": "editorTextFocus"
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  }
+}
