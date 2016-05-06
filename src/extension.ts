@@ -39,12 +39,12 @@ function colonize(option) {
 
 export function activate(context: vscode.ExtensionContext) {
 
-  let ordinaryDisposable = vscode.commands.registerCommand('extension.ordinaryColonize', () => {
+  let ordinaryDisposable = vscode.commands.registerCommand('colonize.ordinary', () => {
     colonize(null);
   });
 
 
-  let newlineDisposable = vscode.commands.registerCommand('extension.newlineColonize', () => {
+  let newlineDisposable = vscode.commands.registerCommand('colonize.newline', () => {
     colonize('newline');
   });
 

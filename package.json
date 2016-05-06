@@ -31,25 +31,25 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onCommand:extension.ordinaryColonize",
-    "onCommand:extension.newlineColonize"
+    "onCommand:colonize.newline",
+    "onCommand:colonize.ordinary"
   ],
-  "main": "./out/src/extension",
+  "main": "./out/src/colonize",
   "contributes": {
     "commands": [{
-      "command": "extension.ordinaryColonize",
+      "command": "colonize.ordinary",
       "title": "Colonize Ordinary"
     }, {
-      "command": "extension.newlineColonize",
+      "command": "colonize.newline",
       "title": "Colonize Newline"
     }],
     "keybindings": [{
-      "command": "extension.ordinaryColonize",
+      "command": "colonize.ordinary",
       "key": "shift+enter",
       "mac": "shift+enter",
       "when": "editorTextFocus"
     }, {
-      "command": "extension.newlineColonize",
+      "command": "colonize.newline",
       "key": "alt+enter",
       "mac": "alt+enter",
       "when": "editorTextFocus"
