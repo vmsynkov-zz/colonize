@@ -7,3 +7,4 @@
 
 ### Links
 * [GitHub](https://github.com/vmsynkov/colonize)
+* [VisualStudio Marketplace](https://marketplace.visualstudio.com/items?itemName=vmsynkov.colonize)
