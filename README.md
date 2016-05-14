@@ -1,5 +1,5 @@
 # **Colonize**
-## ***Insert semicolons with ease***
+> ***Insert semicolons with ease***
 
 ### Key Bindings
 * `Shift+Enter` Insert semicolon at the end of line and continue on the same line
