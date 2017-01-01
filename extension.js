@@ -1,9 +1,7 @@
 const vscode = require('vscode');
 
 function colonize( option ) {
-    
     var editor = vscode.window.activeTextEditor;
-    
     if ( !editor ) return;
 
     var lineIndex = editor.selection.active.line;
@@ -17,6 +15,8 @@ function colonize( option ) {
     });
 
     if ( !semiResult ) return;
+
+    vscode.commands.executeCommand('acceptSelectedSuggestion');
 
     var cursorResult;
 
