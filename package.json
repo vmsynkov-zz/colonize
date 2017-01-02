@@ -2,7 +2,7 @@
   "name": "colonize",
   "displayName": "Colonize",
   "description": "Adds semicolon at the end of the line and optionally newline after",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "publisher": "vmsynkov",
   "license": "GPL-3.0",
   "main": "./extension",
@@ -11,6 +11,7 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
+    "standard": "^8.6.0",
     "vscode": "^0.11.0"
   },
   "engines": {
@@ -43,23 +44,29 @@
     "onCommand:colonize.endline"
   ],
   "contributes": {
-    "commands": [{
-      "command": "colonize.endline",
-      "title": "Colonize and Jump to End"
-    }, {
-      "command": "colonize.newline",
-      "title": "Colonize and Jump to Newline"
-    }],
-    "keybindings": [{
-      "command": "colonize.endline",
-      "key": "shift+enter",
-      "mac": "shift+enter",
-      "when": "editorTextFocus"
-    }, {
-      "command": "colonize.newline",
-      "key": "alt+enter",
-      "mac": "alt+enter",
-      "when": "editorTextFocus"
-    }]
+    "commands": [
+      {
+        "command": "colonize.endline",
+        "title": "Colonize and Jump to End"
+      },
+      {
+        "command": "colonize.newline",
+        "title": "Colonize and Jump to Newline"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "colonize.endline",
+        "key": "shift+enter",
+        "mac": "shift+enter",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "colonize.newline",
+        "key": "alt+enter",
+        "mac": "alt+enter",
+        "when": "editorTextFocus"
+      }
+    ]
   }
 }
