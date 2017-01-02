@@ -4,23 +4,25 @@ function colonize( option ) {
     var editor = vscode.window.activeTextEditor;
     if ( !editor ) return;
 
-    var lineIndex = editor.selection.active.line;
-    var lineObject = editor.document.lineAt( lineIndex );
-    var lineLength = lineObject.text.length;
+    vscode.commands.executeCommand('acceptSelectedSuggestion').then(()=>{
+        var lineIndex = editor.selection.active.line;
+        var lineObject = editor.document.lineAt( lineIndex );
+        var lineLength = lineObject.text.length;
 
-    if ( lineObject.text.charAt( lineLength - 1 ) != ";" && !lineObject.isEmptyOrWhitespace ) {
-        var semiResult = editor.edit( ( editBuilder ) => {
-            editBuilder.insert(new vscode.Position( lineIndex, lineLength ), ";");
-        });
+        if ( lineObject.text.charAt( lineLength - 1 ) != ";" && !lineObject.isEmptyOrWhitespace ) {
+            var semiResult = editor.edit( ( editBuilder ) => {
+                editBuilder.insert(new vscode.Position( lineIndex, lineLength ), ";");
+            });
 
-        if ( !semiResult ) return;
-    }
+            if ( !semiResult ) return;
+        }
 
-    var cursorResult;
+        var cursorResult;
 
-    option == 'endline'
-        ? cursorResult = vscode.commands.executeCommand('cursorEnd')
-        : cursorResult = vscode.commands.executeCommand('editor.action.insertLineAfter')
+        option == 'endline'
+            ? cursorResult = vscode.commands.executeCommand('cursorEnd')
+            : cursorResult = vscode.commands.executeCommand('editor.action.insertLineAfter')
+    })
 }
 
 function activate(context) {
