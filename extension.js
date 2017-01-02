@@ -16,6 +16,8 @@ function colonize( option ) {
         if ( !semiResult ) return;
     }
 
+    vscode.commands.executeCommand('acceptSelectedSuggestion');
+
     var cursorResult;
 
     option == 'endline'
