@@ -15,6 +15,14 @@ function colonize (option) {
       })
 
       if (!semiResult) return
+    } else if (option === 'stayPosition' && !lineObject.isEmptyOrWhitespace) {
+      var semiResult = editor.edit((editBuilder) => {
+        var start = new vscode.Position(lineIndex, lineLength - 1);
+        var end = new vscode.Position(lineIndex, lineLength);
+        editBuilder.delete(new vscode.Range(start, end));
+      });
+
+      if (!semiResult) return
     }
 
     switch (option) {
