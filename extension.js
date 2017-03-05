@@ -17,9 +17,14 @@ function colonize (option) {
       if (!semiResult) return
     }
 
-    option === 'endline'
-      ? vscode.commands.executeCommand('cursorEnd')
-      : vscode.commands.executeCommand('editor.action.insertLineAfter')
+    switch (option) {
+      case "endline": 
+        vscode.commands.executeCommand('cursorEnd')
+        break;
+      case "newline": 
+        vscode.commands.executeCommand('editor.action.insertLineAfter')
+        break;
+    }
   })
 }
 
@@ -32,8 +37,13 @@ function activate (context) {
     colonize('newline')
   })
 
+  var stayPositionDisposable = vscode.commands.registerCommand('colonize.stayPosition', () => {
+    colonize('stayPosition')
+  })
+
   context.subscriptions.push(endLineDisposable)
   context.subscriptions.push(newLineDisposable)
+  context.subscriptions.push(stayPositionDisposable)
 }
 
 exports.activate = activate
