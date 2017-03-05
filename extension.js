@@ -15,11 +15,24 @@ function colonize (option) {
       })
 
       if (!semiResult) return
+    } else if (option === 'stayPosition' && !lineObject.isEmptyOrWhitespace) {
+      var semiResult = editor.edit((editBuilder) => {
+        var start = new vscode.Position(lineIndex, lineLength - 1);
+        var end = new vscode.Position(lineIndex, lineLength);
+        editBuilder.delete(new vscode.Range(start, end));
+      });
+
+      if (!semiResult) return
     }
 
-    option === 'endline'
-      ? vscode.commands.executeCommand('cursorEnd')
-      : vscode.commands.executeCommand('editor.action.insertLineAfter')
+    switch (option) {
+      case "endline": 
+        vscode.commands.executeCommand('cursorEnd')
+        break;
+      case "newline": 
+        vscode.commands.executeCommand('editor.action.insertLineAfter')
+        break;
+    }
   })
 }
 
@@ -32,8 +45,13 @@ function activate (context) {
     colonize('newline')
   })
 
+  var stayPositionDisposable = vscode.commands.registerCommand('colonize.stayPosition', () => {
+    colonize('stayPosition')
+  })
+
   context.subscriptions.push(endLineDisposable)
   context.subscriptions.push(newLineDisposable)
+  context.subscriptions.push(stayPositionDisposable)
 }
 
 exports.activate = activate
