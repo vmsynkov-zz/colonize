@@ -10,12 +10,14 @@ function colonize (option) {
     var lineLength = lineObject.text.length
 
     if (lineObject.text.charAt(lineLength - 1) !== ';' && !lineObject.isEmptyOrWhitespace) {
-      var semiResult = editor.edit((editBuilder) => {
+      var insertionSuccess = editor.edit((editBuilder) => {
         editBuilder.insert(new vscode.Position(lineIndex, lineLength), ';')
       })
 
-      if (!semiResult) return
+      if (!insertionSuccess) return
     }
+
+    if (option === 'hold') return
 
     option === 'endline'
       ? vscode.commands.executeCommand('cursorEnd')
@@ -28,12 +30,17 @@ function activate (context) {
     colonize('endline')
   })
 
+  var holdDisposable = vscode.commands.registerCommand('colonize.hold', () => {
+    colonize('hold')
+  })
+
   var newLineDisposable = vscode.commands.registerCommand('colonize.newline', () => {
     colonize('newline')
   })
 
   context.subscriptions.push(endLineDisposable)
   context.subscriptions.push(newLineDisposable)
+  context.subscriptions.push(holdDisposable)
 }
 
 exports.activate = activate
