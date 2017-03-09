@@ -3,6 +3,11 @@ All notable changes to the "Colonize" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [2.2.1] - 2017-03-10
+
+### Changed
+- Hold position command is fired with ctrl+alt+enter now. Because ctrl+enter is Visual Studio Code shortcut for insert newline below and people may be used to it.
+
 ## [2.2.0] - 2017-03-10
 
 ### Added
@@ -25,6 +30,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Start following [SemVer](http://semver.org) properly.
 
 [Unreleased]: https://github.com/vmsynkov/colonize/compare/2.2.0...HEAD
+[2.2.1]: https://github.com/vmsynkov/colonize/compare/2.2.0...2.2.1
 [2.2.0]: https://github.com/vmsynkov/colonize/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/vmsynkov/colonize/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/vmsynkov/colonize/compare/1.0.0...2.0.0
