@@ -8,7 +8,7 @@
 
   - <kbd>shift</kbd> + <kbd>enter</kbd> Insert semicolon at the end of line and continue on the same line
   - <kbd>alt</kbd> + <kbd>enter</kbd> Insert semicolon at the end of line and continue on the new line
-  - <kbd>ctrl</kbd> + <kbd>ctrl</kbd> + <kbd>enter</kbd> Insert semicolon and stay at the same position
+  - <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>enter</kbd> Insert semicolon and stay at the same position
 
 - First accepts autocomplete suggestion if one is present and then does its job
 

@@ -3,6 +3,11 @@ All notable changes to the "Colonize" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [2.2.2] - 2017-03-10
+
+### Fixed
+- Mistyping in readme. Shamefully, it can't be done without bumping the version number up.
+
 ## [2.2.1] - 2017-03-10
 
 ### Changed
@@ -29,7 +34,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Switched from ts to js
 - Start following [SemVer](http://semver.org) properly.
 
-[Unreleased]: https://github.com/vmsynkov/colonize/compare/2.2.0...HEAD
+[Unreleased]: https://github.com/vmsynkov/colonize/compare/2.2.2...HEAD
+[2.2.2]: https://github.com/vmsynkov/colonize/compare/2.2.1...2.2.2
 [2.2.1]: https://github.com/vmsynkov/colonize/compare/2.2.0...2.2.1
 [2.2.0]: https://github.com/vmsynkov/colonize/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/vmsynkov/colonize/compare/2.0.0...2.1.0
