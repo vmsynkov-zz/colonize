@@ -1,4 +1,4 @@
-# **colonize**
+# **Colonize**
 
 ![showcase](images/showcase.gif)
 

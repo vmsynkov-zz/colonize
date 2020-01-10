@@ -47,15 +47,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "colonize.endline",
+        "command": "Colonize.endline",
         "title": "colonize and Jump to End"
       },
       {
-        "command": "colonize.newline",
+        "command": "Colonize.newline",
         "title": "colonize and Jump to Newline"
       },
       {
-        "command": "colonize.hold",
+        "command": "Colonize.hold",
         "title": "colonize and Hold position"
       }
     ],
