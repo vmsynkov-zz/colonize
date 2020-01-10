@@ -7,7 +7,7 @@
 ***Support for Flutter and dart***
 
 - Adds three shortcuts to insert semicolons with ease;
-- Depends on coma position in line. If there is coma before close bracket (,) put a coma end of the line otherwise puts a semicolon.
+- Depends on comma position in line. If there is comma before close bracket (,) put a comma end of the line otherwise puts a semicolon.
 
   - <kbd>shift</kbd> + <kbd>enter</kbd> Insert semicolon at the end of line and continue on the same line
   - <kbd>alt</kbd> + <kbd>enter</kbd> Insert semicolon at the end of line and continue on the new line
