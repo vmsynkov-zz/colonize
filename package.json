@@ -1,9 +1,9 @@
 {
   "name": "colonize",
-  "displayName": "Colonize",
-  "description": "Adds semicolon at the end of the line and optionally newline after",
+  "displayName": "colonize",
+  "description": "Adds semicolon or coma at the end of the line and optionally newline after",
   "version": "2.2.2",
-  "publisher": "vmsynkov",
+  "publisher": "tasty",
   "license": "GPL-3.0",
   "main": "./extension",
   "scripts": {
@@ -48,15 +48,15 @@
     "commands": [
       {
         "command": "colonize.endline",
-        "title": "Colonize and Jump to End"
+        "title": "colonize and Jump to End"
       },
       {
         "command": "colonize.newline",
-        "title": "Colonize and Jump to Newline"
+        "title": "colonize and Jump to Newline"
       },
       {
         "command": "colonize.hold",
-        "title": "Colonize and Hold position"
+        "title": "colonize and Hold position"
       }
     ],
     "keybindings": [
